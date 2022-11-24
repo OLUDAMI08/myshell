@@ -1,13 +1,11 @@
 #include "main.h"
 
-
 char *get_location(char *command)
 {
 	char *path, *path_copy, *file_path;
 	char *path_token;
 	int command_len, directory_len;
 	struct stat buffer;
-
 
 	path = getenv("PATH");
 	if (path)
@@ -35,9 +33,9 @@ char *get_location(char *command)
 			free(file_path);
 			path_token = strtok(NULL, ":");
 		}
-	}	
+	
+		}	
 	free(path_copy);
-
 	if (stat(command, &buffer) == 0)
 	{
 		return (command);

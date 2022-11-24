@@ -40,10 +40,10 @@ int main(int argc,char **argv)
         for(num_token = 0; token != NULL; num_token++)
 
         {
-                //printf("%s\n", token);
+                /*printf("%s\n", token);*/
                 token = strtok(NULL, delim);
         }
-        //printf("%d\n", num_token);
+        /*printf("%d\n", num_token);*/
 
         /*copy tokenized string out*/
 	argv = malloc(sizeof(char) * num_token);
@@ -62,7 +62,7 @@ int main(int argc,char **argv)
 
 	}
 
-	//execute(argv);
+	/*execute(argv);*/
         /* free up allocated memory */
         free(lineptr);
 	 free(dup_lineptr);
